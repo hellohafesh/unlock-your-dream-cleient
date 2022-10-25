@@ -1,7 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Outlet } from 'react-router-dom';
-import Courses from '../AllPages/Courses/Courses';
 import Footer from '../AllPages/Share/Footer/Footer';
 import Header from '../AllPages/Share/Header/Header';
 import SideNav from '../AllPages/Share/SideNav/SideNav';
@@ -12,10 +11,10 @@ const Main = () => {
             <Header></Header>
             <Container>
                 <Row>
-                    <Col lg="4">
+                    <Col lg="2" className='d-none d-lg-block d-md-block' >
                         <SideNav></SideNav>
                     </Col>
-                    <Col lg="8">
+                    <Col lg="10">
                         <Outlet></Outlet>
                     </Col>
                 </Row>

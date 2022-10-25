@@ -1,13 +1,13 @@
 import React from 'react';
 import Header from '../Share/Header/Header';
 
-const Blogs = () => {
+const About = () => {
     return (
         <div>
             <Header></Header>
-            <h1>Blogs</h1>
+            <h1>About Us</h1>
         </div>
     );
 };
 
-export default Blogs;
+export default About;
