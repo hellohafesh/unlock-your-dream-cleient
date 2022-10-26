@@ -25,7 +25,7 @@ const Courses = () => {
                             <Card.Body>
                                 <Card.Title>{course.course_name}</Card.Title>
                                 <Card.Text>
-                                    {course.details.slice(1, 100)}...
+                                    {course.details.slice(0, 95)}...
                                 </Card.Text>
 
                                 <Button variant="primary"> <Link to={`/courses/course/${course.id}`} className='text-white' >See More About Course</Link></Button>

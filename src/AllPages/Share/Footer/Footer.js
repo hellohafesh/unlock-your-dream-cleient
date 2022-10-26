@@ -1,26 +1,31 @@
 import React from 'react';
+import { FaFacebook, FaTwitter, FaGoogle, FaInstagramSquare, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const Footer = () => {
     return (
         <div>
             <footer className="bg-primary text-center text-white">
                 <div className="container p-4">
+                    <h3 className='text-center'>JOIN US</h3>
                     <section className="mb-4">
-                        <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-                        ><i className="fab fa-facebook-f"></i ></a>
-                        <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-                        ><i className="fab fa-twitter"></i></a>
 
-                        <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-                        ><i className="fab fa-google"></i></a>
+                        <a className="btn btn-outline-light btn-floating m-1" target='blank' href="#!" role="button"
+                        >
+                            <FaFacebook /></a>
+                        <a className="btn btn-outline-light btn-floating m-1" target='blank' href="#!" role="button"
+                        ><FaTwitter /></a>
 
-                        <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-                        ><i className="fab fa-instagram"></i></a>
+                        <a className="btn btn-outline-light btn-floating m-1" target='blank' href="#!" role="button"
+                        >
+                            <FaGoogle /></a>
 
-                        <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-                        ><i className="fab fa-linkedin-in"></i></a>
-                        <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-                        ><i className="fab fa-github"></i></a>
+                        <a className="btn btn-outline-light btn-floating m-1" target='blank' href="#!" role="button"
+                        ><FaInstagramSquare /></a>
+
+                        <a className="btn btn-outline-light btn-floating m-1" target='blank' href="#!" role="button"
+                        ><FaLinkedin /></a>
+                        <a className="btn btn-outline-light btn-floating m-1" target='blank' href="#!" role="button"
+                        ><FaGithub /></a>
                     </section>
                     <section className="">
                         <form action="">
@@ -38,6 +43,7 @@ const Footer = () => {
                                 </div>
                                 <div className="col-auto">
                                     <button type="submit" className="btn btn-outline-light mb-4">
+                                        send
                                     </button>
                                 </div>
                             </div>
@@ -45,9 +51,7 @@ const Footer = () => {
                     </section>
                     <section className="mb-4">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-                            repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-                            eum harum corrupti dicta, aliquam sequi voluptate quas.
+                            We believe each of our students is a member of the UYF family. So any constructive comments from students motivate us to move forward to correct our mistakes. It is not too late to make a career decision. Enroll in any online or offline course at your convenience now.
                         </p>
                     </section>
                     <section className="">
@@ -57,7 +61,7 @@ const Footer = () => {
 
                                 <ul className="list-unstyled mb-0">
                                     <li>
-                                        <a href="#!" className="text-white">Link 1</a>
+                                        <a href="#!" style={{ textDecoration: "none" }} className="text-white"> Feedback</a>
                                     </li>
                                 </ul>
                             </div>
@@ -66,7 +70,7 @@ const Footer = () => {
 
                                 <ul className="list-unstyled mb-0">
                                     <li>
-                                        <a href="#!" className="text-white">Link 1</a>
+                                        <a href="#!" style={{ textDecoration: "none" }} className="text-white"> Contact Us</a>
                                     </li>
                                 </ul>
                             </div>
@@ -75,7 +79,7 @@ const Footer = () => {
 
                                 <ul className="list-unstyled mb-0">
                                     <li>
-                                        <a href="#!" className="text-white">Link 1</a>
+                                        <a href="#!" style={{ textDecoration: "none" }} className="text-white"> About Us</a>
                                     </li>
                                 </ul>
                             </div>
@@ -84,17 +88,17 @@ const Footer = () => {
 
                                 <ul className="list-unstyled mb-0">
                                     <li>
-                                        <a href="#!" className="text-white">Link 1</a>
+                                        <a href="#!" style={{ textDecoration: "none" }} className="text-white">Send your Feedback</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </section>
                 </div>
-                {/* <div className="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                <div className="text-center p-3" style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}>
                     © 2020 Copyright:
-                    <a className="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-                </div> */}
+                    <a className="text-white" style={{ textDecoration: "none" }} href="https://unlock-your-dreams.web.app/">UnlockYourDream.com</a>
+                </div>
             </footer>
 
 
