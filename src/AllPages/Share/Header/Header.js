@@ -36,14 +36,6 @@ const Header = () => {
                             <Link className='p-2 text-bold text-dark' to='/faq'>Faq</Link>
                             <Link className='p-2 text-bold text-dark' to='/blogs'>Blogs</Link>
                             <Link className='p-2 text-bold text-dark' to='/'>About</Link>
-
-                            {/* <Nav.Link href="/">Home</Nav.Link> */}
-                            {/* <Link to='/courses/all'>HOME</Link> */}
-                            {/* <Nav.Link href="/courses/all">Courses</Nav.Link> */}
-                            {/* <Nav.Link href="/courses/premium">Premium Acsess</Nav.Link>
-                            <Nav.Link href="/faq">Faq</Nav.Link>
-                            <Nav.Link href="/blogs">Blogs</Nav.Link>
-                            <Nav.Link href="/about">About</Nav.Link> */}
                             <div className='d-md-none d-lg-none'>
                                 <SideNav></SideNav>
                             </div>
@@ -57,7 +49,7 @@ const Header = () => {
 
 
 
-                                    <Link className='ms-3' to='/'>
+                                    <Link className='ms-3' to='/profile'>
                                         {
                                             user?.photoURL ? <Image style={{ height: '40px', width: '40px', borderRadius: '50px' }} src={user?.photoURL}></Image> : <FaUserCircle />
                                         }
@@ -66,7 +58,7 @@ const Header = () => {
                                 </>
                                     :
                                     <><FaUserCircle />
-                                        <Link className='ms-3' to='/login'>Log IN</Link>
+                                        <Link className='ms-3' to='/login'>Login</Link>
                                     </>
                                 }
                             </p>

@@ -45,13 +45,7 @@ const AuthProvider = ({ children }) => {
         return () => {
             unsbscribe();
         }
-    }, [])
-
-
-
-
-
-
+    }, []);
     const allinfo = {
         user,
         loading,
@@ -62,9 +56,6 @@ const AuthProvider = ({ children }) => {
         updateUserProfile,
         setLoading
     };
-
-
-
     return (
         <AuthContex.Provider value={allinfo}>
             {children}

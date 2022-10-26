@@ -90,7 +90,7 @@ const SingUp = () => {
                                         </div>
                                         <div className="form-outline mb-4 ps-lg-5 pe-lg-5 ">
                                             <label className="form-label" for="form2Example2">Password</label>
-                                            <input type="password" placeholder='Enter Your Email' name="password" className="form-control" required />
+                                            <input type="password" placeholder='Enter Your Password' name="password" className="form-control" required />
                                         </div>
                                         <p className=' mb-4 ps-lg-5 text-danger'>{error}</p>
                                         <div className="mb-2 ps-lg-5 ">
@@ -105,7 +105,7 @@ const SingUp = () => {
                                         <div className='ps-lg-5'>
                                             <button type="submit" className="btn btn-primary btn-block mb-4" disabled={!accept}>Sign in</button>
                                         </div>
-                                        <p className='ps-lg-5 '>Have a Account? <a href="/login">Log In</a></p>
+                                        <p className='ps-lg-5 '>Have a Account? <Link to="/login">Login</Link></p>
                                     </div>
                                 </div>
                             </div>

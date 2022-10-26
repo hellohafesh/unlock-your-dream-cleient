@@ -8,6 +8,7 @@ import Faq from "../../AllPages/Faq/Faq";
 import Home from "../../AllPages/Home/Home";
 import Login from "../../AllPages/Login/Login";
 import Premium from "../../AllPages/Premium/Premium";
+import Profile from "../../AllPages/Profile/Profile";
 import SingUp from "../../AllPages/SingUp/SingUp";
 import Main from "../../Layout/Main";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
@@ -40,8 +41,8 @@ export const routes = createBrowserRouter([
         element: <About></About>
     },
     {
-        path: '*',
-        element: <Blank></Blank>
+        path: '/profile',
+        element: <PrivateRoute><Profile></Profile></PrivateRoute>
     },
     {
 
@@ -64,6 +65,10 @@ export const routes = createBrowserRouter([
             {
                 path: '/courses/premium',
                 element: <PrivateRoute><Premium></Premium></PrivateRoute>
+            },
+            {
+                path: '*',
+                element: <Blank></Blank>
             },
         ]
     },
