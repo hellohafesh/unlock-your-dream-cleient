@@ -52,13 +52,12 @@ export const routes = createBrowserRouter([
 
             {
                 path: '/courses/all',
-                element: <Courses></Courses>,
-                loader: ({ params }) => fetch(`http://localhost:5000/coursesDetails/${params.id}`)
+                element: <Courses></Courses>
             },
             {
                 path: '/courses/course/:id',
                 element: <Course></Course>,
-                loader: ({ params }) => fetch(`http://localhost:5000/coursesDetails/${params.id}`)
+                loader: ({ params }) => fetch(`https://unlock-your-dreams-server.vercel.app/coursesDetails/${params.id}`)
             },
 
 
