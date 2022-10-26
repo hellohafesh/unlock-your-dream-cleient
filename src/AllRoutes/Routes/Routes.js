@@ -10,6 +10,7 @@ import Login from "../../AllPages/Login/Login";
 import Premium from "../../AllPages/Premium/Premium";
 import SingUp from "../../AllPages/SingUp/SingUp";
 import Main from "../../Layout/Main";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 export const routes = createBrowserRouter([
 
@@ -62,7 +63,7 @@ export const routes = createBrowserRouter([
 
             {
                 path: '/courses/premium',
-                element: <Premium></Premium>
+                element: <PrivateRoute><Premium></Premium></PrivateRoute>
             },
         ]
     },

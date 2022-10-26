@@ -3,28 +3,40 @@ import { useContext } from 'react';
 import { Container } from 'react-bootstrap';
 import Footer from '../Share/Footer/Footer';
 import Header from '../Share/Header/Header';
-
 import { AuthContex } from '../../contex/AuthProvider/AuthProvider';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+
 
 
 const Login = () => {
-    const { singIn } = useContext(AuthContex);
-    const navigate = useNavigate()
+    const [error, setError] = useState('');
+    const { singIn, setLoading } = useContext(AuthContex);
+    const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || '/';
+
+
     const handleLogin = event => {
         event.preventDefault();
-        const from = event.target;
-        const email = from.email.value;
-        const password = from.password.value;
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
         singIn(email, password)
             .then(result => {
                 const user = result.user;
                 console.log(user);
-
-                from.reset();
-                navigate('/')
+                form.reset();
+                navigate(from, { replace: true });
             })
-            .catch(error => console.error(error))
+            .catch(error => {
+                console.log(error);
+                setError(error.message)
+            })
+            .finally(() => {
+                setLoading(false);
+            })
     }
 
 
@@ -33,8 +45,6 @@ const Login = () => {
         <div>
             <Header></Header>
             <Container>
-
-
                 <form onSubmit={handleLogin} className='d-flex justify-content-center align-items-center  p-1 p-5'>
 
                     <div className='w-100 p-lg-5   pe-lg-5 '>
@@ -45,14 +55,16 @@ const Login = () => {
                                     <p className='text-center'>For Your Better Future</p>
                                     <div className="form-outline mb-4 ps-lg-5  pe-lg-5 ">
                                         <label className="form-label" for="form2Example1">Email address</label>
-                                        <input type="email" placeholder='Enter Your Email' name="email" className="form-control" required />
+                                        <input type="email" placeholder='Enter Your Email' name="email" className="form-control" />
                                     </div>
                                     <div className="form-outline mb-4 ps-lg-5 pe-lg-5 ">
                                         <label className="form-label" for="form2Example2">Password</label>
                                         <input type="password" placeholder='Enter Your Password' name="password" className="form-control" required />
                                     </div>
+                                    <p className=' mb-4 ps-lg-5 text-danger'>{error}</p>
                                     <div className="row mb-4 ps-lg-5 ">
                                         <div className="col">
+
                                             <a href="#!">Forgot password?</a>
                                         </div>
                                     </div>

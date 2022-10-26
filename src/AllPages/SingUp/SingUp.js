@@ -1,40 +1,63 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useContext } from 'react';
 import { Container } from 'react-bootstrap';
 import { GoogleAuthProvider } from 'firebase/auth';
 import Footer from '../Share/Footer/Footer';
 import { AuthContex } from '../../contex/AuthProvider/AuthProvider';
 import Header from '../Share/Header/Header';
+import { Form, Link, useLocation, useNavigate } from 'react-router-dom';
 
 const SingUp = () => {
+    const [error, setError] = useState('');
+    const [accept, setAccept] = useState(false);
     const googleProvider = new GoogleAuthProvider();
-    const { googleProviderLogin, createUser } = useContext(AuthContex);
+    const { googleProviderLogin, createUser, updateUserProfile } = useContext(AuthContex);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
     const googleSingIn = () => {
         googleProviderLogin(googleProvider)
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                navigate(from, { replace: true });
             })
             .catch(error => console.error(error))
     }
     const handleSubmit = event => {
         event.preventDefault();
-        const from = event.target;
-        const name = from.name.value;
-        const photoURL = from.photoURL.value;
-        const email = from.email.value;
-        const password = from.password.value;
-        console.log(name, photoURL, email, password);
+        const form = event.target;
+        const name = form.name.value;
+        const photoURL = form.photoURL.value;
+        const email = form.email.value;
+        const password = form.password.value;
+
         createUser(email, password)
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                from.reset();
+
+                form.reset();
+                handleUserProfile(name, photoURL);
+                navigate(from, { replace: true });
             })
-            .catch(error => console.error(error))
+            .catch(error => {
+                console.error(error.message);
+                setError(error.message)
+            })
     }
-
-
+    const handleUserProfile = (name, photoURL) => {
+        const profile = {
+            displayName: name,
+            photoURL: photoURL
+        }
+        updateUserProfile(profile)
+            .then(() => { })
+            .catch(error => console.log(error));
+    }
+    const handleAcept = event => {
+        setAccept(event.target.checked)
+    }
 
 
 
@@ -69,8 +92,18 @@ const SingUp = () => {
                                             <label className="form-label" for="form2Example2">Password</label>
                                             <input type="password" placeholder='Enter Your Email' name="password" className="form-control" required />
                                         </div>
+                                        <p className=' mb-4 ps-lg-5 text-danger'>{error}</p>
+                                        <div className="mb-2 ps-lg-5 ">
+                                            <input
+                                                type="checkbox"
+                                                id="disabledFieldsetCheck"
+                                                onClick={handleAcept}
+                                            />
+                                            <label className='ms-2' for="">Accepts Our <Link to="/">Terms And Condition</Link> </label>
+                                        </div>
+
                                         <div className='ps-lg-5'>
-                                            <button type="submit" className="btn btn-primary btn-block mb-4">Sign in</button>
+                                            <button type="submit" className="btn btn-primary btn-block mb-4" disabled={!accept}>Sign in</button>
                                         </div>
                                         <p className='ps-lg-5 '>Have a Account? <a href="/login">Log In</a></p>
                                     </div>

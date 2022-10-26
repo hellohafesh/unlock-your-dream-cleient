@@ -69,7 +69,6 @@ const Header = () => {
                                         <Link className='ms-3' to='/login'>Log IN</Link>
                                     </>
                                 }
-
                             </p>
 
                         </Navbar.Text>
