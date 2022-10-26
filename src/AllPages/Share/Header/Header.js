@@ -1,11 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import SideNav from '../SideNav/SideNav';
+import DarkModeToggle from "react-dark-mode-toggle";
+import { useContext } from 'react';
+import { AuthContex } from '../../../contex/AuthProvider/AuthProvider';
+import { FaUserCircle } from 'react-icons/fa';
+import { Image } from 'react-bootstrap';
+
+
+
 
 const Header = () => {
+    const { user, logout } = useContext(AuthContex);
+    const logouthbutton = () => [
+        logout()
+            .then(() => { })
+            .catch(error => console.error(error))
+    ]
+    const [isDarkMode, setIsDarkMode] = useState(() => false);
     return (
         <div>
             <Navbar className='mb-4 p-3' bg="primary" variant="dark" expand="lg">
@@ -37,13 +52,38 @@ const Header = () => {
                     </Navbar.Collapse>
                     <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text>
-                            Signed in as: <a href="#login">Mark Otto</a>
+                            <p>
+                                {user?.uid ? <>
+
+
+
+                                    <Link className='ms-3' to='/'>
+                                        {
+                                            user?.photoURL ? <Image style={{ height: '40px', width: '40px', borderRadius: '50px' }} src={user?.photoURL}></Image> : <FaUserCircle />
+                                        }
+                                    </Link>
+                                    <Link onClick={logouthbutton} className='ms-3' to='/'>Log Out</Link>
+                                </>
+                                    :
+                                    <><FaUserCircle />
+                                        <Link className='ms-3' to='/login'>Log IN</Link>
+                                    </>
+                                }
+                            </p>
                         </Navbar.Text>
+                        <div className='ms-3'>
+                            <DarkModeToggle
+                                onChange={setIsDarkMode}
+                                checked={isDarkMode}
+                                size={60}
+                            />
+                        </div>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
         </div>
     );
 };
+
 
 export default Header;

@@ -1,7 +1,22 @@
 import React from 'react';
+import { useContext } from 'react';
 import { Container } from 'react-bootstrap';
+// import { GoogleAuthProvider } from 'firebase/auth';
+import { GoogleAuthProvider } from 'firebase/auth';
+
+import { AuthContex } from '../../contex/AuthProvider/AuthProvider';
 
 const SingUp = () => {
+    const googleProvider = new GoogleAuthProvider();
+    const { googleProviderLogin } = useContext(AuthContex);
+    const googleSingIn = () => {
+        googleProviderLogin(googleProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => console.error(error))
+    }
     return (
         <Container>
             <form className='d-flex justify-content-center align-items-center p-1 p-5'>
@@ -45,7 +60,7 @@ const SingUp = () => {
                             Facebook
                         </button>
 
-                        <button type="button" className="btn btn-link btn-floating mx-1">
+                        <button type="button" onClick={googleSingIn} className="btn btn-link btn-floating mx-1">
                             Google
                         </button>
 
