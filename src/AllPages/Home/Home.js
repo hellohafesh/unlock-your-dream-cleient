@@ -11,16 +11,10 @@ const Home = () => {
     return (
         <div>
             <Header></Header>
-
-
-
             <Container>
-
                 <header>
-
-                    <section className="container mb-5">
+                    <section className="container ">
                         <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="false">
-
                             <div className=" carousel-inner ">
                                 <div className="carousel-item active">
                                     <Image src="https://scontent.xx.fbcdn.net/v/t1.15752-9/308118671_424302286543868_4819413455296922861_n.jpg?stp=dst-jpg_p206x206&_nc_cat=100&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeE18kK8Og2tnsa9gYKzEpW9YsYLUR2vi0JixgtRHa-LQis6dW06QGJORFQXERLfWNZrO_WvifzBxvfHORRCEaSz&_nc_ohc=UxwxqFZ2jMcAX8bQ62R&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdS6ItxbaYedBQD8IQ1ZIf61iH8oULcah_w4AwD3805ZwQ&oe=6381435F" className="d-block w-100" alt="..." />
@@ -34,7 +28,6 @@ const Home = () => {
                                         <Link className="btn btn-primary fw-bold btn-lg" to='/'> Premium Access</Link>
                                     </div>
                                 </div>
-
                             </div>
                             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
                                 data-bs-slide="prev">
@@ -47,35 +40,22 @@ const Home = () => {
                                 <span className="visually-hidden">Next</span>
                             </button>
                         </div>
-
-
-
-
                     </section>
-
                 </header>
-
-
-
                 <br />
                 <br />
-
                 <main className="container mt-5">
                     <section className=" mt-5">
                         <div className="text-center">
-                            <h1 className="font-weight-bolder"> Teaching through practical projects is our specialty</h1>
+                            <h1 className="font-weight-bolder"> Teaching through practical projects is our speciality</h1>
                             <p>
                                 Any education is incomplete without practical projects. According to a survey, 67 percent of people suffer in their working life due to lack of hands-on education alone. Moreover, without a portfolio in the marketplace or local jobs, it takes a lot of time to get a job. More or less everyone suffers from this problem at the beginning of all careers. So Creative IT believes in hands-on learning. That is why we have enough number of projects in each course. If you complete all the projects under the supervision of our skilled mentors, you can build a good portfolio during the course itself.
                             </p>
                         </div>
-
                     </section>
-
                     <br />
                     <br />
                     <section>
-
-
                         <div className="card mt-5 mb-3 support-bg" style={{ width: "100%" }}>
                             <div className="row g-0">
                                 <div className="col-md-4">
@@ -125,16 +105,10 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-
-
-
-
                         <br />
                         <br />
                         <br />
                     </section>
-
-
                     <section className='mt-4'>
                         <div className="mt-5">
                             <div className=" d-lg-flex d-md-flex bg-primary rounded pt-5 mt-5 p-5 mb-5">
@@ -198,34 +172,10 @@ const Home = () => {
                             </div>
                         </div>
                     </section>
-
-
-
-
-
-
-
-
-
-
                     <section>
                         <br />
                         <br />
-                        <div className="text-center mt-5 mb-5">
-                            <h1 className="mt-5 mb-5"> We are associated with 700+ </h1>
-                            <h2 className="mt-5 mb-5">We Are working with the best companies in the country</h2>
-                            <div
-                                className=" d-lg-flex d-md-none d-sm-none d-none justify-content-center flex-md-wrap align-items-center   gap-5">
-                                <Image className="image-fluid" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/297985451_2062748460598185_2109635238319941632_n.png?_nc_cat=101&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeGs3OFR6j5QTSRLcADBt6z4TAwd8qNcxZdMDB3yo1zFl8mAJgpLV_wz6NJn6aIFLnGObhkf2zGy0kOarwKRKgh9&_nc_ohc=Rl4olaPGuRoAX8ag6yQ&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdQFE1JzVDEh2sXRJ1QWULhaUJnkXWJjy1GEPduwio3vSg&oe=637FA30E" alt="" />
-                                <Image className="image-fluid" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/288835374_389856373114723_5357748091902494881_n.png?_nc_cat=106&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeGxdUhCm2MsKDjiz6DHGpc83LD388yxBSXcsPfzzLEFJdKMhk0mzQn5dOaFf_O0n2KxS4bm_gdqb3FrpMVEwu2-&_nc_ohc=NonkoejNGmYAX-MtG_n&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdQ2rzOu6yRybD-EJWTbmCNjUaDdnoxAQJ6HciRKEz5h_w&oe=638005A9" alt="" />
-                                <Image className="image-fluid" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/307254250_1758969234476000_5834388798087277211_n.png?_nc_cat=111&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeFkDCoNMzYHGfNFreGV7jlqvrlUsFY2Sxm-uVSwVjZLGdjMnBlvUS6W6NTazOhkbnYfvXA9LnpM5-HzvmJBpwvc&_nc_ohc=BB4Tp3CuTM4AX8PXvIZ&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdS1RXn2z4RnQJB-YX18gLmp9Egy4uv4C6Loqs76Bjgafw&oe=6380E1E1" alt="" />
-                                <Image className="image-fluid" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/308096634_636445028020618_5924477746847487953_n.png?_nc_cat=107&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeEEW_m9d8ASpDjWHntrk6Vu5kTTfThhUd3mRNN9OGFR3RZWmwQnnwa9EIXd3i39SDIz5CDajV2WYawhL59PwdVo&_nc_ohc=P8gz4Gx3FFAAX_wgcQg&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdTJB93ED6MAyTQN3WKPuvIYVcfPBYUhjPuUaY3Z0qw9ag&oe=6380FF25" alt="" />
-                                <Image className="image-fluid" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/307978603_1761598087536195_354508618001549442_n.png?_nc_cat=111&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeE_LUD0MdO3uBChir7G-5YFGFpx20_knNMYWnHbT-Sc0_myB_qpBa5OKT8WAOl2tHhu2yTb1uctJOfwMvnO1BBe&_nc_ohc=HPoiSmDP1xMAX9CvQht&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdSlbrjc9WsfoDi-UINmqjt8V9-TvKjeWLEFoJvDTxSZWA&oe=63813EEC" alt="" />
-                                <Image className="image-fluid" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/298249109_446995977308997_7268555277977249397_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeGjXYPPqo3m_9gZIEi2ruuj5GDokWaCCWfkYOiRZoIJZzZiIJsYgrLdXddSNvl0NlGW_baZFYpGEXxB58Fg8g4p&_nc_ohc=bs4ct0awWKkAX9xsAtD&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdSzK3Gb_daP_Rt1Cc8sMhzaru-Y9DYtTL0rwj7fCHct_A&oe=638021E2" alt="" />
-                            </div>
-                        </div>
                     </section>
-
                 </main>
                 <div className='text-center p-5 mt-5 mb-5'>
                     <h1>Admission is ongoing for all courses</h1>
@@ -270,7 +220,6 @@ const Home = () => {
             </Container>
             <Footer></Footer>
         </div >
-
     );
 };
 

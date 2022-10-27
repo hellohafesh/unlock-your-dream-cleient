@@ -11,7 +11,7 @@ const SideNav = () => {
             .then(data => setCourses(data));
     }, [])
     return (
-        <div className='p-3 mb-2 bg-primary text-white'>
+        <div className='p-3 mt-3 rounded mb-2 bg-primary text-white'>
             <h4>All Courses {courses.length}</h4>
             <div className='p-3'>
                 {

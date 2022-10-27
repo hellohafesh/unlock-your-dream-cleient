@@ -25,35 +25,33 @@ const Header = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => false);
     return (
         <div>
-            <Navbar className='mb-4 ' bg="primary" variant="dark" expand="lg">
+            <Navbar className='mb-0 ' bg="primary" variant="dark" expand="lg">
                 <Container>
-                    <div className="">
-                        <Image style={{ width: '180px', height: '65px', borderRadius: '15px' }} src="https://scontent.fdac24-2.fna.fbcdn.net/v/t1.15752-9/307885908_419068553564567_3845618597107844735_n.png?_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeHBe_iIo-WD9s9v4HWe6m0fdsjyDiEW_aJ2yPIOIRb9oqYatXDBAtlc-Px7HOlVfsLIPnAKfGCjdvrYolkbGEo0&_nc_ohc=dbB2-oSn6fYAX_P9rwc&_nc_ht=scontent.fdac24-2.fna&oh=03_AdQ6Tx0zKNIJ-56Ee-z9419oVMg8h6AApttqQSheAhSXFQ&oe=63804411" alt="" />
-                    </div>
-
+                    <Link to='/'>
+                        <div className="d-flex">
+                            <div className="">
+                                <Image style={{ width: '180px', height: '110px', borderRadius: '15px' }} src="https://scontent.xx.fbcdn.net/v/t1.15752-9/308131439_8151304491610783_5130003209430739569_n.png?stp=dst-png_p206x206&_nc_cat=103&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeHI5Oj8L0NlB68GM4NB764RCgyIUtGGBkYKDIhS0YYGRr5_8315m8Wlqzm2EuC69qvv_fYEVsDnUUVK1NnphF6K&_nc_ohc=eWjdYN7KW8QAX9Q_Gik&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdQA8HgRQQLE4sQ3kVSalBivQdXWjps5YxzirvLt707row&oe=637EED90" alt="" />
+                            </div>
+                        </div>
+                    </Link>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto ">
                             <Link className=' ms-5 text-bold text-dark btn btn-outline-light btn-floating m-2' to='/'>Home</Link>
                             <Link className=' text-bold text-dark btn btn-outline-light btn-floating m-2' to='/courses/all'>Courses</Link>
                             <Link className=' text-bold text-dark btn btn-outline-light btn-floating m-2' to='/blogs'>Blogs</Link>
-                            <Link className=' text-bold text-dark btn btn-outline-light btn-floating m-2' to='/faq'>Faq</Link>
+                            <Link className=' text-bold text-dark btn btn-outline-light btn-floating m-2' to='/faq'>FAQ</Link>
                             <Link className=' text-bold text-dark btn btn-outline-light btn-floating m-2' to='/'>About</Link>
-
                             <Link className=' text-bold text-dark btn btn-outline-light btn-floating m-2' to='/courses/premium'>404 </Link>
                             <div className='d-md-none d-lg-none'>
                                 <SideNav></SideNav>
                             </div>
                         </Nav>
-
                     </Navbar.Collapse>
                     <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text>
                             <p>
                                 {user?.uid ? <>
-
-
-
                                     <Link className='ms-3' to='/profile'>
                                         {
                                             user?.photoURL ? <Image title={user?.displayName} style={{ height: '40px', width: '40px', borderRadius: '50px' }} src={user?.photoURL}></Image> : <FontAwesomeIcon style={{ height: '40px', width: '40px', borderRadius: '50px' }} icon={faCircleUser} />

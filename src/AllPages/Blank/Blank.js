@@ -100,7 +100,7 @@ const Blank = () => {
                     <h2>Couldn't launch :(</h2>
                     <h1 className=' texxt w-100 h-100'>Page 404</h1>
                     <button type="button" className="btn btn-primary btn-block mb-4">
-                        <Link className='text-dark' to='/'>Back Home</Link>
+                        <Link className='text-dark' style={{ textDecoration: "none" }} to='/'>Back Home</Link>
                     </button>
                 </div>
 

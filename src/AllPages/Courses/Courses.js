@@ -1,11 +1,13 @@
-import React from 'react';
+import { React, useRef } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
+import ReactToPrint from 'react-to-print';
 
 const Courses = () => {
+    const ref = useRef();
     const [courses, setCourses] = useState([]);
     useEffect(() => {
         fetch('https://unlock-your-dreams-server.vercel.app/courses')
@@ -15,7 +17,8 @@ const Courses = () => {
     }, []);
 
     return (
-        <div>
+        <div ref={ref}>
+            <ReactToPrint trigger={() => <Button className='mt-4'>Print Details</Button>} content={() => ref.current} />
             <div className='text-center'>
                 <h1 className='mb-4 ms-5'>All Popular Courses {courses.length}</h1>
                 <p>
