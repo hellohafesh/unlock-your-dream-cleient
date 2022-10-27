@@ -63,7 +63,8 @@ export const routes = createBrowserRouter([
 
             {
                 path: '/courses/premium',
-                element: <PrivateRoute><Premium></Premium></PrivateRoute>
+                element: <PrivateRoute><Premium></Premium></PrivateRoute>,
+                loader: ({ params }) => fetch(`https://unlock-your-dreams-server.vercel.app/coursesDetails/${params.id}`)
             },
             {
                 path: '*',

@@ -16,7 +16,11 @@ const Courses = () => {
 
     return (
         <div>
-            <h1 className='mb-4 ms-5'>All Courses {courses.length}</h1>
+            <div className='text-center'>
+                <h1 className='mb-4 ms-5'>All Popular Courses {courses.length}</h1>
+                <p>
+                    Our course list is arranged with those skills which are currently in most demand in the country and outside the country. From here you can enroll in online or offline courses anytime at your convenience.</p>
+            </div>
             <div className='d-flex flex-wrap justify-content-around' >
                 {
                     courses.map(course => <div key={course.id}>
@@ -25,10 +29,10 @@ const Courses = () => {
                             <Card.Body>
                                 <Card.Title>{course.course_name}</Card.Title>
                                 <Card.Text>
-                                    {course.details.slice(0, 95)}...
+                                    {course.details.slice(0, 110)}...
                                 </Card.Text>
 
-                                <Button variant="primary"> <Link to={`/courses/course/${course.id}`} className='text-white' >See More About Course</Link></Button>
+                                <Button variant="primary"> <Link to={`/courses/course/${course.id}`} style={{ textDecoration: "none" }} className='text-white' >See More About Course</Link></Button>
                             </Card.Body>
                         </Card>
                     </div>)

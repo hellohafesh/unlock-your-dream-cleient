@@ -13,10 +13,10 @@ const SideNav = () => {
     return (
         <div className='p-3 mb-2 bg-primary text-white'>
             <h4>All Courses {courses.length}</h4>
-            <div>
+            <div className='p-3'>
                 {
                     courses.map(course => <p key={course.id}>
-                        <Link to={`/courses/course/${course.id}`} className='w-100 p-2 text-bold text-dark  btn btn-outline-light btn-floating m-1' >{course.course_name}</Link>
+                        <Link to={`/courses/course/${course.id}`} style={{ textDecoration: "none" }} className='w-100 p-2 text-bold text-dark  btn btn-outline-light btn-floating m-1' >{course.course_name}</Link>
                     </p>)
 
                 }

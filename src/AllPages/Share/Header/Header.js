@@ -10,6 +10,7 @@ import { AuthContex } from '../../../contex/AuthProvider/AuthProvider';
 import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Image } from 'react-bootstrap';
+import './Header.css';
 
 
 
@@ -54,7 +55,7 @@ const Header = () => {
 
                                     <Link className='ms-3' to='/profile'>
                                         {
-                                            user?.photoURL ? <Image style={{ height: '40px', width: '40px', borderRadius: '50px' }} src={user?.photoURL}></Image> : <FontAwesomeIcon style={{ height: '40px', width: '40px', borderRadius: '50px' }} icon={faCircleUser} />
+                                            user?.photoURL ? <Image title={user?.displayName} style={{ height: '40px', width: '40px', borderRadius: '50px' }} src={user?.photoURL}></Image> : <FontAwesomeIcon style={{ height: '40px', width: '40px', borderRadius: '50px' }} icon={faCircleUser} />
                                         }
                                     </Link>
                                     <Link onClick={logouthbutton} className='ms-3 mb-4 p-2 text-bold text-dark btn btn-outline-light btn-floating m-1' to='/'>Log Out</Link>
@@ -69,6 +70,10 @@ const Header = () => {
                             </p>
 
                         </Navbar.Text>
+                        <div className="tooltip">
+                            <Image className="size_of_img" style={{ height: '40px', width: '40px', borderRadius: '50px' }} src={user?.photoURL} alt="Image 1" />
+                            <span class="tooltiptext">grewon.pdf</span>
+                        </div>
                         <div className='ms-3 mb-4'>
                             <DarkModeToggle
                                 onChange={setIsDarkMode}
@@ -79,7 +84,7 @@ const Header = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-        </div>
+        </div >
     );
 };
 
