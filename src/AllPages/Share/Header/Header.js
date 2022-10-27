@@ -36,10 +36,11 @@ const Header = () => {
                         <Nav className="me-auto ">
                             <Link className=' ms-5 text-bold text-dark btn btn-outline-light btn-floating m-2' to='/'>Home</Link>
                             <Link className=' text-bold text-dark btn btn-outline-light btn-floating m-2' to='/courses/all'>Courses</Link>
-                            <Link className=' text-bold text-dark btn btn-outline-light btn-floating m-2' to='/courses/premium'>Premium </Link>
                             <Link className=' text-bold text-dark btn btn-outline-light btn-floating m-2' to='/blogs'>Blogs</Link>
                             <Link className=' text-bold text-dark btn btn-outline-light btn-floating m-2' to='/faq'>Faq</Link>
                             <Link className=' text-bold text-dark btn btn-outline-light btn-floating m-2' to='/'>About</Link>
+
+                            <Link className=' text-bold text-dark btn btn-outline-light btn-floating m-2' to='/courses/premium'>404 </Link>
                             <div className='d-md-none d-lg-none'>
                                 <SideNav></SideNav>
                             </div>

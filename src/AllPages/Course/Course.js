@@ -2,7 +2,8 @@ import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import './Course.css';
-import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBCardImage, MDBIcon, MDBRipple, MDBBtn, } from "mdb-react-ui-kit";
+import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBCardImage, MDBIcon, MDBRipple } from "mdb-react-ui-kit";
+import { Button } from 'react-bootstrap';
 
 const Course = () => {
     const course = useLoaderData();
@@ -74,9 +75,10 @@ const Course = () => {
                                                 </span>
                                             </div>
                                             <div className="d-flex flex-column mt-4">
-                                                <MDBBtn outline color="primary" size="sm" className="mt-2">
-                                                    <Link className="text-dark" style={{ textDecoration: "none" }} to='/courses/premium'> Try Premium </Link>
-                                                </MDBBtn>
+                                                <Button>
+                                                    <Link className="text-dark btn-primary" style={{ textDecoration: "none" }} to={`/courses/premium/${course.id}`}> Try Premium </Link>
+
+                                                </Button>
                                             </div>
                                         </MDBCol>
                                     </MDBRow>

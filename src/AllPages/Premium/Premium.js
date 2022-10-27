@@ -1,9 +1,17 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 const Premium = () => {
+    const course = useLoaderData();
+    console.log(course)
     return (
         <div>
-            <h1> Wellcome Your Premium Version On Your Course</h1>
+
+
+            <div className="text-center">
+                <h1> Wellcome Your Premium Version On Your Course</h1>
+                <h2> Start Your Dream WIth : {course.course_name}</h2>
+            </div>
             <section>
                 <div className=" d-lg-flex d-md-flex bg-primary rounded pt-5  p-5 mb-5">
                     <div className=" col-md-8 col-lg-8 col-12 text-white">

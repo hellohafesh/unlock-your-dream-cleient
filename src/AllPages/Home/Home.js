@@ -28,7 +28,7 @@ const Home = () => {
                                         <h1 className="fw-bold">Let the career begin
                                             Confidence <br /> in skills</h1>
                                         <p>One of the country's ISO certified IT
-                                            Training institutes BD Tech IT institutes with experienced mentors and updated
+                                            Training institutes UYD IT institutes with experienced mentors and updated
                                             curriculum are ready for your career
                                             advancement. Choose your favorite course today from our more than 30 trendy courses.</p>
                                         <Link className="btn btn-primary fw-bold btn-lg" to='/courses/premium'>Get Premium Access</Link>
