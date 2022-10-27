@@ -3,7 +3,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import './Course.css';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBCardImage, MDBIcon, MDBRipple } from "mdb-react-ui-kit";
-import { Button } from 'react-bootstrap';
+import { Button, Image } from 'react-bootstrap';
 
 const Course = () => {
     const course = useLoaderData();
@@ -109,14 +109,52 @@ const Course = () => {
 
             </div>
 
+            <section>
+
+
+                <div className="card mt-5 mb-3 support-bg" style={{ width: "100%" }}>
+                    <div className="row g-0">
+                        <div className="col-md-8">
+                            <div className="card-body">
+                                <h1 className="card-title">More About This Course </h1>
+                                <p className="card-text mt-5">
+                                    <b>
+                                        {course.course_overview2}
+                                    </b>
+                                </p>
+
+                                <div className="">
+                                    <button className="btn btn-outline-primary mb-5 ms-2 mt-5  fw-bold " type="submit">Read
+                                        Continue Course
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-4">
+                            <Image className="h-100 w-100  image-fluid rounded-start" src={course.image_url} alt="..." />
+                        </div>
+
+                    </div>
+                </div>
 
 
 
-            <p>{course.course_overview}</p>
-            <p>{course.course_overview2}</p>
+
+                <br />
+                <br />
+                <br />
+            </section>
+
+
+            <div className="">
+                <h1 className='text-center'>More Some thing You Have to Know</h1>
+                <h6>
+                    {course.course_overview}
+                </h6>
+            </div>
+
 
             <br />
-            <Link to="/courses/premium"> Try prmium</Link>
 
 
 

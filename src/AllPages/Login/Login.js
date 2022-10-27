@@ -6,23 +6,42 @@ import Header from '../Share/Header/Header';
 import { AuthContex } from '../../contex/AuthProvider/AuthProvider';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { GoogleAuthProvider, GithubAuthProvider } from 'firebase/auth';
+import { FaGoogle, FaGithub } from 'react-icons/fa';
 
 
 
 const Login = () => {
     const [error, setError] = useState('');
-    const { singIn, setLoading } = useContext(AuthContex);
+    const { singIn, setLoading, githubProviderLogin, googleProviderLogin } = useContext(AuthContex);
     const navigate = useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || '/';
-
-
+    const googleProvider = new GoogleAuthProvider();
+    const githubProvider = new GithubAuthProvider();
+    const googleSingIn = () => {
+        googleProviderLogin(googleProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                navigate(from, { replace: true });
+            })
+            .catch(error => console.error(error))
+    }
+    const githubSingIn = () => {
+        githubProviderLogin(githubProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                navigate(from, { replace: true });
+            })
+            .catch(error => console.error(error))
+    }
     const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-
         singIn(email, password)
             .then(result => {
                 const user = result.user;
@@ -73,6 +92,16 @@ const Login = () => {
                                     </div>
                                     <p className='ps-lg-5 '>Not a member? <a href="/singup">Register</a></p>
                                 </div>
+                            </div>
+                            <div className="text-center">
+                                <h5><b>Continue with:</b></h5>
+                                <button type="button" onClick={googleSingIn} className="btn btn-primary btn-outline-light btn-floating m-2">
+                                    <FaGoogle style={{ height: "40px", width: "40px" }} />
+                                </button>
+
+                                <button type="button" onClick={githubSingIn} className="btn btn-primary btn-outline-light btn-floating m-2">
+                                    <FaGithub style={{ height: "40px", width: "40px" }} />
+                                </button>
                             </div>
                         </div>
                     </div>

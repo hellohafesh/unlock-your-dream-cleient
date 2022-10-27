@@ -1,22 +1,33 @@
 import React, { useState } from 'react';
 import { useContext } from 'react';
 import { Container } from 'react-bootstrap';
-import { GoogleAuthProvider } from 'firebase/auth';
+import { GoogleAuthProvider, GithubAuthProvider } from 'firebase/auth';
 import Footer from '../Share/Footer/Footer';
 import { AuthContex } from '../../contex/AuthProvider/AuthProvider';
 import Header from '../Share/Header/Header';
 import { Form, Link, useLocation, useNavigate } from 'react-router-dom';
+import { FaGoogle, FaGithub } from 'react-icons/fa';
 
 const SingUp = () => {
     const [error, setError] = useState('');
     const [accept, setAccept] = useState(false);
     const googleProvider = new GoogleAuthProvider();
-    const { googleProviderLogin, createUser, updateUserProfile } = useContext(AuthContex);
+    const githubProvider = new GithubAuthProvider();
+    const { googleProviderLogin, githubProviderLogin, createUser, updateUserProfile } = useContext(AuthContex);
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
     const googleSingIn = () => {
         googleProviderLogin(googleProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                navigate(from, { replace: true });
+            })
+            .catch(error => console.error(error))
+    }
+    const githubSingIn = () => {
+        githubProviderLogin(githubProvider)
             .then(result => {
                 const user = result.user;
                 console.log(user);
@@ -112,17 +123,13 @@ const SingUp = () => {
                         </div>
 
                         <div className="text-center">
-                            <p>or sign up with:</p>
-                            <button type="button" className="btn btn-link btn-floating mx-1">
-                                Facebook
+                            <h5><b>or sign up with:</b></h5>
+                            <button type="button" onClick={googleSingIn} className="btn btn-primary btn-outline-light btn-floating m-2">
+                                <FaGoogle style={{ height: "40px", width: "40px" }} />
                             </button>
 
-                            <button type="button" onClick={googleSingIn} className="btn btn-link btn-floating mx-1">
-                                Google
-                            </button>
-
-                            <button type="button" className="btn btn-link btn-floating mx-1">
-                                Github
+                            <button type="button" onClick={githubSingIn} className="btn btn-primary btn-outline-light btn-floating m-2">
+                                <FaGithub style={{ height: "40px", width: "40px" }} />
                             </button>
                         </div>
                     </div>

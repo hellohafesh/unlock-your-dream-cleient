@@ -24,6 +24,9 @@ const Main = () => {
                 <h1>Admission is ongoing for all courses</h1>
                 <p className='m-5'>UYD is at your side to keep yourself updated with modern technology. Be it IT sector or non-IT sector, IT experts are now in good demand everywhere. That is why we have been creating IT experts for 10 years with updated curriculum, experienced mentors and modern labs. As a result of this, we have found more than 50 thousand successful faces, who have become self-reliant and created employment for more people. And the success of these students is the inspiration for our journey. We believe that every human being is talented, and it is our responsibility to develop your talent. All that is required is your interest and regular practice.</p>
             </div>
+            <div className="text-center pb-5">
+                <h1>Why You Choose Us</h1>
+            </div>
             <div className=" gap-5 d-flex flex-wrap justify-content-around">
 
                 <Card style={{ marginBottom: "30px", width: '300px', height: '400px' }}>

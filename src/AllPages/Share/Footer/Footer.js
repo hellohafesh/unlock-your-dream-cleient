@@ -42,7 +42,7 @@ const Footer = () => {
                                     </div>
                                 </div>
                                 <div className="col-auto">
-                                    <button type="submit" className="btn btn-outline-light mb-4">
+                                    <button type="!#" className="btn btn-outline-light mb-4">
                                         send
                                     </button>
                                 </div>
@@ -57,38 +57,63 @@ const Footer = () => {
                     <section className="">
                         <div className="row">
                             <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-                                <h5 className="text-uppercase">Links</h5>
+                                <h5 className="">Response</h5>
 
                                 <ul className="list-unstyled mb-0">
                                     <li>
-                                        <a href="#!" style={{ textDecoration: "none" }} className="text-white"> Feedback</a>
+                                        <a href="#!" style={{ textDecoration: "none" }} className="text-white"> Meet With Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" style={{ textDecoration: "none" }} className="text-white"> Privacy Statement</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" style={{ textDecoration: "none" }} className="text-white"> Opinion</a>
                                     </li>
                                 </ul>
                             </div>
                             <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-                                <h5 className="text-uppercase">Links</h5>
+                                <h5 className="">Usefull Link</h5>
 
                                 <ul className="list-unstyled mb-0">
                                     <li>
                                         <a href="#!" style={{ textDecoration: "none" }} className="text-white"> Contact Us</a>
                                     </li>
+                                    <li>
+                                        <a href="#!" style={{ textDecoration: "none" }} className="text-white"> Newsletters</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" style={{ textDecoration: "none" }} className="text-white"> Location Map</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-                                <h5 className="text-uppercase">Links</h5>
+                                <h5 className="">Branding</h5>
 
                                 <ul className="list-unstyled mb-0">
                                     <li>
                                         <a href="#!" style={{ textDecoration: "none" }} className="text-white"> About Us</a>
                                     </li>
+                                    <li>
+                                        <a href="#!" style={{ textDecoration: "none" }} className="text-white"> Blog</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" style={{ textDecoration: "none" }} className="text-white">
+                                            Photo Gallery</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-                                <h5 className="text-uppercase">Links</h5>
+                                <h5 className="">Get In Tuch</h5>
 
                                 <ul className="list-unstyled mb-0">
                                     <li>
                                         <a href="#!" style={{ textDecoration: "none" }} className="text-white">Send your Feedback</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" style={{ textDecoration: "none" }} className="text-white">skill.jobs</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" style={{ textDecoration: "none" }} className="text-white">Covid-19 updates</a>
                                     </li>
                                 </ul>
                             </div>

@@ -31,7 +31,7 @@ const Home = () => {
                                             Training institutes UYD IT institutes with experienced mentors and updated
                                             curriculum are ready for your career
                                             advancement. Choose your favorite course today from our more than 30 trendy courses.</p>
-                                        <Link className="btn btn-primary fw-bold btn-lg" to='/courses/premium'>Get Premium Access</Link>
+                                        <Link className="btn btn-primary fw-bold btn-lg" to='/'> Premium Access</Link>
                                     </div>
                                 </div>
 
@@ -57,8 +57,10 @@ const Home = () => {
 
 
 
+                <br />
+                <br />
 
-                <main className="container">
+                <main className="container mt-5">
                     <section className=" mt-5">
                         <div className="text-center">
                             <h1 className="font-weight-bolder"> Teaching through practical projects is our specialty</h1>
@@ -68,10 +70,13 @@ const Home = () => {
                         </div>
 
                     </section>
+
+                    <br />
+                    <br />
                     <section>
 
 
-                        <div className="card mb-3 support-bg" style={{ width: "100%" }}>
+                        <div className="card mt-5 mb-3 support-bg" style={{ width: "100%" }}>
                             <div className="row g-0">
                                 <div className="col-md-4">
                                     <Image className="h-100 w-100  image-fluid rounded-start" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/310239759_534811681820594_2705794266899844724_n.png?stp=dst-png_p235x165&_nc_cat=104&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeHXPqq4p9GCCxSrINCkY_KZWv3xpqWyf9Ra_fGmpbJ_1DhJeEkySXN5YzXC0v_IlVrmB-FTjTjWvBYB3rW0sY1_&_nc_ohc=b5fvJwHpcIsAX8TYOIG&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdRP6bxYTn49csfEwlPJP6hkaw63VxCa089vrDEZtlyCwg&oe=638105F5" alt="..." />
@@ -124,62 +129,68 @@ const Home = () => {
 
 
 
-
+                        <br />
+                        <br />
+                        <br />
                     </section>
 
 
-                    <section>
-                        <div className=" d-lg-flex d-md-flex bg-primary rounded pt-5  p-5 mb-5">
-                            <div className=" col-md-8 col-lg-8 col-12 text-white">
-                                <h1> Participate in free seminars </h1>
-                                <p>Can't decide which course to take for freelancing? Join our free seminar. In these subject
-                                    wise
-                                    seminars you will know
-                                    about the possibilities of each course. Moreover, by talking to the expert counselor present
-                                    in
-                                    the seminar, you can
-                                    easily decide to choose the appropriate course.</p>
-                            </div>
-                            <div className="col-4  ps-5 pt-5 ms-5 ">
-                                <button type="button" className="btn btn-light btn-lg  text-primary fw-bold" data-bs-toggle="modal"
-                                    data-bs-target="#staticBackdrop">
-                                    Join Now
-                                </button>
+                    <section className='mt-4'>
+                        <div className="mt-5">
+                            <div className=" d-lg-flex d-md-flex bg-primary rounded pt-5 mt-5 p-5 mb-5">
+                                <div className=" mt-5 ">
+                                    <div className=" col-md-8 col-lg-8 col-12 text-white">
+                                        <h1> Participate in free seminars </h1>
+                                        <p>Can't decide which course to take for freelancing? Join our free seminar. In these subject
+                                            wise
+                                            seminars you will know
+                                            about the possibilities of each course. Moreover, by talking to the expert counselor present
+                                            in
+                                            the seminar, you can
+                                            easily decide to choose the appropriate course.</p>
+                                    </div>
+                                </div>
+                                <div className="col-4  ps-5 pt-5 ms-5 ">
+                                    <button type="button" className="btn btn-light btn-lg  text-primary fw-bold" data-bs-toggle="modal"
+                                        data-bs-target="#staticBackdrop">
+                                        Join Now
+                                    </button>
 
-                                <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                    <div className="modal-dialog">
-                                        <div className="modal-content">
-                                            <div className="modal-header">
-                                                <h5 className="modal-title" id="staticBackdropLabel">Modal title</h5>
-                                                <button type="button" className="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close"></button>
-                                            </div>
-                                            <div className="modal-body">
-                                                <form>
-                                                    <div className="mb-3">
-                                                        <h2> Join With Google Meet</h2>
-                                                        <label for="exampleInputEmail1" className="form-label">Email address</label>
-                                                        <input type="email" className="form-control" id="exampleInputEmail1"
-                                                            aria-describedby="emailHelp" />
-                                                        <div id="emailHelp" className="form-text">We'll never share your email with
-                                                            anyone else.</div>
-                                                    </div>
-                                                    <div className="mb-3">
-                                                        <label for="exampleInputPassword1" className="form-label">Password</label>
-                                                        <input type="password" className="form-control" id="exampleInputPassword1" />
-                                                    </div>
-                                                    <div className="mb-3 form-check">
-                                                        <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                                                        <label className="form-check-label" for="exampleCheck1">Check me out</label>
-                                                    </div>
-                                                </form>
+                                    <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                        <div className="modal-dialog">
+                                            <div className="modal-content">
+                                                <div className="modal-header">
+                                                    <h5 className="modal-title" id="staticBackdropLabel">Modal title</h5>
+                                                    <button type="button" className="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div className="modal-body">
+                                                    <form>
+                                                        <div className="mb-3">
+                                                            <h2> Join With Google Meet</h2>
+                                                            <label for="exampleInputEmail1" className="form-label">Email address</label>
+                                                            <input type="email" className="form-control" id="exampleInputEmail1"
+                                                                aria-describedby="emailHelp" />
+                                                            <div id="emailHelp" className="form-text">We'll never share your email with
+                                                                anyone else.</div>
+                                                        </div>
+                                                        <div className="mb-3">
+                                                            <label for="exampleInputPassword1" className="form-label">Password</label>
+                                                            <input type="password" className="form-control" id="exampleInputPassword1" />
+                                                        </div>
+                                                        <div className="mb-3 form-check">
+                                                            <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                                                            <label className="form-check-label" for="exampleCheck1">Check me out</label>
+                                                        </div>
+                                                    </form>
 
-                                            </div>
-                                            <div className="modal-footer">
-                                                <button type="button" className="btn btn-secondary"
-                                                    data-bs-dismiss="modal">Close</button>
-                                                <button type="button" className="btn btn-primary">Join</button>
+                                                </div>
+                                                <div className="modal-footer">
+                                                    <button type="button" className="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="button" className="btn btn-primary">Join</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
